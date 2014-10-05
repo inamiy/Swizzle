@@ -163,4 +163,22 @@ class SwizzleTests: _TestCase
         XCTAssertEqual(MyObject.bonjour(), "MyObject+bonjour")
     }
     
+    func testDealloc()
+    {
+        let swizzle: Void -> Void = {
+//            (MyObject.self, "dealloc") <-> "_swift_dealloc"   // comment-out: doesn't work
+            (MyObject.self, "dealloc") <-> "_objc_dealloc"  // NOTE: swizzled_dealloc must be implemented as ObjC code
+        }
+        
+        swizzle()
+        
+        let expect = self.expectationWithDescription(__FUNCTION__)
+        
+        MyObject() { // deinitClosure
+            expect.fulfill()
+        }
+        
+        self.waitForExpectationsWithTimeout(1, handler: nil)
+    }
+    
 }

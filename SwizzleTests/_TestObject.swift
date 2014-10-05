@@ -43,4 +43,28 @@ class MyObject: NSObject
     {
         return "MyObject+bonjour"
     }
+    
+    let deinitClosure: (Void -> Void)?
+    
+    init(deinitClosure: (Void -> Void)? = nil)
+    {
+        self.deinitClosure = deinitClosure
+        super.init()
+        
+        println("[init] \(self)")
+    }
+    
+    deinit
+    {
+        println("[deinit] \(self)")
+        
+        self.deinitClosure?()
+    }
+    
+    // WARNING: swizzling `dealloc` in Swift won't work
+    dynamic func _swift_dealloc()
+    {
+        println("_swift_dealloc")
+        self._swift_dealloc()
+    }
 }

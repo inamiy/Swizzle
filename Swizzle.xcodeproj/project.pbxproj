@@ -14,6 +14,7 @@
 		1F7D63A919C466DA00A7C3A6 /* Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D63A819C466DA00A7C3A6 /* Swizzle.swift */; };
 		1F7D63AB19C469BE00A7C3A6 /* _TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D63AA19C469BE00A7C3A6 /* _TestObject.swift */; };
 		1F7D63AD19C46AED00A7C3A6 /* _TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D63AC19C46AED00A7C3A6 /* _TestCase.swift */; };
+		1FA3D1C819E16CC700EB17FD /* NSObject+Dealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3D1C719E16CC700EB17FD /* NSObject+Dealloc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,9 @@
 		1F7D63A819C466DA00A7C3A6 /* Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swizzle.swift; sourceTree = "<group>"; };
 		1F7D63AA19C469BE00A7C3A6 /* _TestObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObject.swift; sourceTree = "<group>"; };
 		1F7D63AC19C46AED00A7C3A6 /* _TestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestCase.swift; sourceTree = "<group>"; };
+		1FA3D1C419E16C5000EB17FD /* SwizzleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwizzleTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		1FA3D1C619E16CC700EB17FD /* NSObject+Dealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Dealloc.h"; sourceTree = "<group>"; };
+		1FA3D1C719E16CC700EB17FD /* NSObject+Dealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Dealloc.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		1F7D639B19C466CE00A7C3A6 /* SwizzleTests */ = {
 			isa = PBXGroup;
 			children = (
+				1FA3D1C919E1700400EB17FD /* ObjC-bridging */,
 				1F7D63AA19C469BE00A7C3A6 /* _TestObject.swift */,
 				1F7D63AC19C46AED00A7C3A6 /* _TestCase.swift */,
 				1F7D639E19C466CE00A7C3A6 /* SwizzleTests.swift */,
@@ -119,6 +124,16 @@
 				1F7D639D19C466CE00A7C3A6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FA3D1C919E1700400EB17FD /* ObjC-bridging */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3D1C419E16C5000EB17FD /* SwizzleTests-Bridging-Header.h */,
+				1FA3D1C619E16CC700EB17FD /* NSObject+Dealloc.h */,
+				1FA3D1C719E16CC700EB17FD /* NSObject+Dealloc.m */,
+			);
+			name = "ObjC-bridging";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA3D1C819E16CC700EB17FD /* NSObject+Dealloc.m in Sources */,
 				1F7D639F19C466CE00A7C3A6 /* SwizzleTests.swift in Sources */,
 				1F7D63AB19C469BE00A7C3A6 /* _TestObject.swift in Sources */,
 				1F7D63AD19C46AED00A7C3A6 /* _TestCase.swift in Sources */,
@@ -461,6 +477,7 @@
 		1F7D63A619C466CE00A7C3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -473,12 +490,15 @@
 				INFOPLIST_FILE = SwizzleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwizzleTests/SwizzleTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1F7D63A719C466CE00A7C3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -487,6 +507,7 @@
 				INFOPLIST_FILE = SwizzleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwizzleTests/SwizzleTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -500,6 +521,7 @@
 				1F029B5E19C58A8A00C59F65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F7D638619C466CE00A7C3A6 /* Build configuration list for PBXProject "Swizzle" */ = {
 			isa = XCConfigurationList;
