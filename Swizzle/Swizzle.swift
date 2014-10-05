@@ -14,8 +14,8 @@ internal func swizzleMethod(var class_: AnyClass!, selector1 sel1: String!, sele
         class_ = object_getClass(class_)
     }
     
-    let selector1 = Selector.convertFromStringLiteral(sel1)
-    let selector2 = Selector.convertFromStringLiteral(sel2)
+    let selector1 = Selector(sel1)
+    let selector2 = Selector(sel2)
     
     var method1: Method = class_getInstanceMethod(class_, selector1)
     var method2: Method = class_getInstanceMethod(class_, selector2)
