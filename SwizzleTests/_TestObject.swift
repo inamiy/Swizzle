@@ -14,17 +14,17 @@ extension NSObject
     {
         return "NSObject-hello"
     }
-    
+
     func bye() -> String
     {
         return "NSObject-bye"
     }
-    
+
     class func hello() -> String
     {
         return "NSObject+hello"
     }
-    
+
     class func bye() -> String
     {
         return "NSObject+bye"
@@ -38,33 +38,33 @@ class MyObject: NSObject
     {
         return "MyObject-bonjour"
     }
-    
+
     dynamic class func bonjour() -> String
     {
         return "MyObject+bonjour"
     }
-    
-    let deinitClosure: (Void -> Void)?
-    
-    init(deinitClosure: (Void -> Void)? = nil)
+
+    let deinitClosure: ((Void) -> Void)?
+
+    init(deinitClosure: ((Void) -> Void)? = nil)
     {
         self.deinitClosure = deinitClosure
         super.init()
-        
-        println("[init] \(self)")
+
+        print("[init] \(self)")
     }
-    
+
     deinit
     {
-        println("[deinit] \(self)")
-        
+        print("[deinit] \(self)")
+
         self.deinitClosure?()
     }
-    
+
     // WARNING: swizzling `dealloc` in Swift won't work
     dynamic func _swift_dealloc()
     {
-        println("_swift_dealloc")
+        print("_swift_dealloc")
         self._swift_dealloc()
     }
 }

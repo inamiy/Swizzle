@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F029B6319C58A9900C59F65 /* Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D63A819C466DA00A7C3A6 /* Swizzle.swift */; };
 		1F7D639219C466CE00A7C3A6 /* Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7D639119C466CE00A7C3A6 /* Swizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F7D639819C466CE00A7C3A6 /* Swizzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7D638C19C466CE00A7C3A6 /* Swizzle.framework */; };
 		1F7D639F19C466CE00A7C3A6 /* SwizzleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D639E19C466CE00A7C3A6 /* SwizzleTests.swift */; };
 		1F7D63A919C466DA00A7C3A6 /* Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D63A819C466DA00A7C3A6 /* Swizzle.swift */; };
 		1F7D63AB19C469BE00A7C3A6 /* _TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D63AA19C469BE00A7C3A6 /* _TestObject.swift */; };
-		1F7D63AD19C46AED00A7C3A6 /* _TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D63AC19C46AED00A7C3A6 /* _TestCase.swift */; };
 		1FA3D1C819E16CC700EB17FD /* NSObject+Dealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3D1C719E16CC700EB17FD /* NSObject+Dealloc.m */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F029B4A19C58A8A00C59F65 /* Swizzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swizzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7D638C19C466CE00A7C3A6 /* Swizzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swizzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7D639019C466CE00A7C3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F7D639119C466CE00A7C3A6 /* Swizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swizzle.h; sourceTree = "<group>"; };
@@ -37,20 +34,15 @@
 		1F7D639E19C466CE00A7C3A6 /* SwizzleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwizzleTests.swift; sourceTree = "<group>"; };
 		1F7D63A819C466DA00A7C3A6 /* Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swizzle.swift; sourceTree = "<group>"; };
 		1F7D63AA19C469BE00A7C3A6 /* _TestObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestObject.swift; sourceTree = "<group>"; };
-		1F7D63AC19C46AED00A7C3A6 /* _TestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _TestCase.swift; sourceTree = "<group>"; };
+		1F9CD3C11DF6392400F16F38 /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
+		1F9CD3C21DF6392400F16F38 /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
+		1F9CD3C31DF6392400F16F38 /* UniversalFramework_Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Test.xcconfig; sourceTree = "<group>"; };
 		1FA3D1C419E16C5000EB17FD /* SwizzleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwizzleTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		1FA3D1C619E16CC700EB17FD /* NSObject+Dealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Dealloc.h"; sourceTree = "<group>"; };
 		1FA3D1C719E16CC700EB17FD /* NSObject+Dealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Dealloc.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F029B4619C58A8A00C59F65 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F7D638819C466CE00A7C3A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,6 +64,7 @@
 		1F7D638219C466CE00A7C3A6 = {
 			isa = PBXGroup;
 			children = (
+				1F9CD3BB1DF6392400F16F38 /* xcconfigs */,
 				1F7D638E19C466CE00A7C3A6 /* Swizzle */,
 				1F7D639B19C466CE00A7C3A6 /* SwizzleTests */,
 				1F7D638D19C466CE00A7C3A6 /* Products */,
@@ -83,7 +76,6 @@
 			children = (
 				1F7D638C19C466CE00A7C3A6 /* Swizzle.framework */,
 				1F7D639719C466CE00A7C3A6 /* SwizzleTests.xctest */,
-				1F029B4A19C58A8A00C59F65 /* Swizzle.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,9 +101,7 @@
 		1F7D639B19C466CE00A7C3A6 /* SwizzleTests */ = {
 			isa = PBXGroup;
 			children = (
-				1FA3D1C919E1700400EB17FD /* ObjC-bridging */,
-				1F7D63AA19C469BE00A7C3A6 /* _TestObject.swift */,
-				1F7D63AC19C46AED00A7C3A6 /* _TestCase.swift */,
+				1FDEA67E1DF63A1F00869C7B /* Fixtures */,
 				1F7D639E19C466CE00A7C3A6 /* SwizzleTests.swift */,
 				1F7D639C19C466CE00A7C3A6 /* Supporting Files */,
 			);
@@ -126,6 +116,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1F9CD3BB1DF6392400F16F38 /* xcconfigs */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CD3C11DF6392400F16F38 /* UniversalFramework_Base.xcconfig */,
+				1F9CD3C21DF6392400F16F38 /* UniversalFramework_Framework.xcconfig */,
+				1F9CD3C31DF6392400F16F38 /* UniversalFramework_Test.xcconfig */,
+			);
+			name = xcconfigs;
+			path = Carthage/Checkouts/xcconfigs;
+			sourceTree = "<group>";
+		};
 		1FA3D1C919E1700400EB17FD /* ObjC-bridging */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,16 +137,18 @@
 			name = "ObjC-bridging";
 			sourceTree = "<group>";
 		};
+		1FDEA67E1DF63A1F00869C7B /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3D1C919E1700400EB17FD /* ObjC-bridging */,
+				1F7D63AA19C469BE00A7C3A6 /* _TestObject.swift */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1F029B4719C58A8A00C59F65 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F7D638919C466CE00A7C3A6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,24 +160,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1F029B4919C58A8A00C59F65 /* Swizzle-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1F029B6119C58A8A00C59F65 /* Build configuration list for PBXNativeTarget "Swizzle-iOS" */;
-			buildPhases = (
-				1F029B4519C58A8A00C59F65 /* Sources */,
-				1F029B4619C58A8A00C59F65 /* Frameworks */,
-				1F029B4719C58A8A00C59F65 /* Headers */,
-				1F029B4819C58A8A00C59F65 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Swizzle-iOS";
-			productName = "Swizzle-iOS";
-			productReference = 1F029B4A19C58A8A00C59F65 /* Swizzle.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		1F7D638B19C466CE00A7C3A6 /* Swizzle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F7D63A219C466CE00A7C3A6 /* Build configuration list for PBXNativeTarget "Swizzle" */;
@@ -217,17 +202,16 @@
 		1F7D638319C466CE00A7C3A6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Yasuhiro Inami";
 				TargetAttributes = {
-					1F029B4919C58A8A00C59F65 = {
-						CreatedOnToolsVersion = 6.1;
-					};
 					1F7D638B19C466CE00A7C3A6 = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0810;
 					};
 					1F7D639619C466CE00A7C3A6 = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -245,19 +229,11 @@
 			targets = (
 				1F7D638B19C466CE00A7C3A6 /* Swizzle */,
 				1F7D639619C466CE00A7C3A6 /* SwizzleTests */,
-				1F029B4919C58A8A00C59F65 /* Swizzle-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1F029B4819C58A8A00C59F65 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F7D638A19C466CE00A7C3A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,14 +251,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1F029B4519C58A8A00C59F65 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F029B6319C58A9900C59F65 /* Swizzle.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F7D638719C466CE00A7C3A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,7 +266,6 @@
 				1FA3D1C819E16CC700EB17FD /* NSObject+Dealloc.m in Sources */,
 				1F7D639F19C466CE00A7C3A6 /* SwizzleTests.swift in Sources */,
 				1F7D63AB19C469BE00A7C3A6 /* _TestObject.swift in Sources */,
-				1F7D63AD19C46AED00A7C3A6 /* _TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,51 +280,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1F029B5D19C58A8A00C59F65 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Swizzle/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Swizzle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1F029B5E19C58A8A00C59F65 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Swizzle/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Swizzle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		1F7D63A019C466CE00A7C3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F9CD3C11DF6392400F16F38 /* UniversalFramework_Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -369,15 +294,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -390,10 +319,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -402,6 +329,7 @@
 		};
 		1F7D63A119C466CE00A7C3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F9CD3C11DF6392400F16F38 /* UniversalFramework_Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -413,8 +341,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -423,15 +353,15 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -439,6 +369,7 @@
 		};
 		1F7D63A319C466CE00A7C3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F9CD3C21DF6392400F16F38 /* UniversalFramework_Framework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -449,15 +380,16 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Swizzle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inamiy.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1F7D63A419C466CE00A7C3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F9CD3C21DF6392400F16F38 /* UniversalFramework_Framework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -468,14 +400,16 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Swizzle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inamiy.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		1F7D63A619C466CE00A7C3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F9CD3C31DF6392400F16F38 /* UniversalFramework_Test.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -488,15 +422,16 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = SwizzleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inamiy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwizzleTests/SwizzleTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1F7D63A719C466CE00A7C3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F9CD3C31DF6392400F16F38 /* UniversalFramework_Test.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -505,24 +440,16 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = SwizzleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inamiy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwizzleTests/SwizzleTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F029B6119C58A8A00C59F65 /* Build configuration list for PBXNativeTarget "Swizzle-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1F029B5D19C58A8A00C59F65 /* Debug */,
-				1F029B5E19C58A8A00C59F65 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1F7D638619C466CE00A7C3A6 /* Build configuration list for PBXProject "Swizzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

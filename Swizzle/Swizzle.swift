@@ -8,53 +8,48 @@
 
 import ObjectiveC
 
-internal func swizzleMethod(var class_: AnyClass!, selector1 sel1: String!, selector2 sel2: String!, #isClassMethod: Bool)
+private func _swizzleMethod(_ class_: AnyClass, from selector1: Selector, to selector2: Selector, isClassMethod: Bool)
 {
+    let c: AnyClass
     if isClassMethod {
-        class_ = object_getClass(class_)
+        c = object_getClass(class_)
     }
-    
-    let selector1 = Selector(sel1)
-    let selector2 = Selector(sel2)
-    
-    var method1: Method = class_getInstanceMethod(class_, selector1)
-    var method2: Method = class_getInstanceMethod(class_, selector2)
-    
-    if class_addMethod(class_, selector1, method_getImplementation(method2), method_getTypeEncoding(method2)) {
-        class_replaceMethod(class_, selector2, method_getImplementation(method1), method_getTypeEncoding(method1))
+    else {
+        c = class_
+    }
+
+    let method1: Method = class_getInstanceMethod(c, selector1)
+    let method2: Method = class_getInstanceMethod(c, selector2)
+
+    if class_addMethod(c, selector1, method_getImplementation(method2), method_getTypeEncoding(method2)) {
+        class_replaceMethod(c, selector2, method_getImplementation(method1), method_getTypeEncoding(method1))
     }
     else {
         method_exchangeImplementations(method1, method2)
     }
 }
 
-public func swizzleInstanceMethod(var class_: AnyClass!, sel1: String!, sel2: String!)
+/// Instance-method swizzling.
+public func swizzleInstanceMethod(_ class_: AnyClass, from sel1: Selector, to sel2: Selector)
 {
-    swizzleMethod(class_, selector1: sel1, selector2: sel2, isClassMethod: false)
+    _swizzleMethod(class_, from: sel1, to: sel2, isClassMethod: false)
 }
 
-public func swizzleClassMethod(var class_: AnyClass!, sel1: String!, sel2: String!)
+/// Instance-method swizzling for unsafe raw-string.
+/// - Note: This is useful for non-`#selector`able methods e.g. `dealloc`, private ObjC methods.
+public func swizzleInstanceMethodString(_ class_: AnyClass, from sel1: String, to sel2: String)
 {
-    swizzleMethod(class_, selector1: sel1, selector2: sel2, isClassMethod: true)
+    swizzleInstanceMethod(class_, from: Selector(sel1), to: Selector(sel2))
 }
 
-//--------------------------------------------------
-// MARK: - Custom Operators
-// + - * / % = < > ! & | ^ ~ .
-//--------------------------------------------------
-
-infix operator <-> { associativity left }
-
-/// Usage: (MyObject.self, "hello") <-> "bye"
-public func <-> (tuple: (class_: AnyClass!, selector1: String!), selector2: String!)
+/// Class-method swizzling.
+public func swizzleClassMethod(_ class_: AnyClass, from sel1: Selector, to sel2: Selector)
 {
-    swizzleInstanceMethod(tuple.class_, tuple.selector1, selector2)
+    _swizzleMethod(class_, from: sel1, to: sel2, isClassMethod: true)
 }
 
-infix operator <+> { associativity left }
-
-/// Usage: (MyObject.self, "hello") <+> "bye"
-public func <+> (tuple: (class_: AnyClass!, selector1: String!), selector2: String!)
+/// Class-method swizzling for unsafe raw-string.
+public func swizzleClassMethodString(_ class_: AnyClass, from sel1: String, to sel2: String)
 {
-    swizzleClassMethod(tuple.class_, tuple.selector1, selector2)
+    swizzleClassMethod(class_, from: Selector(sel1), to: Selector(sel2))
 }
