@@ -7,17 +7,11 @@ Method-Swizzling for Swift.
 ## Example
 
 ```swift
-swizzleInstanceMethod(MyObject.self, "hello", "bye")
+swizzleInstanceMethod(MyObject.self, from: #selector(MyObject.hello), to: #selector(MyObject.bye))
+swizzleInstanceMethodString(MyObject.self, from: "dealloc", to: "_my_dealloc")
 
-swizzleClassMethod(MyObject.self, "hello", "bye")
-```
-
-### Using custom operator
-
-```swift
-(MyObject.self, "hello") <-> "bye"  // swizzleInstanceMethod
-
-(MyObject.self, "hello") <+> "bye"  // swizzleClassMethod
+swizzleClassMethod(MyObject.self, from: #selector(MyObject.hello), to: #selector(MyObject.bye))
+swizzleClassMethodString(MyObject.self, from: "privateObjCClassMethod", to: "myClassMethod")
 ```
 
 
