@@ -13,6 +13,7 @@
 		1F7D63A919C466DA00A7C3A6 /* Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D63A819C466DA00A7C3A6 /* Swizzle.swift */; };
 		1F7D63AB19C469BE00A7C3A6 /* _TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D63AA19C469BE00A7C3A6 /* _TestObject.swift */; };
 		1FA3D1C819E16CC700EB17FD /* NSObject+Dealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3D1C719E16CC700EB17FD /* NSObject+Dealloc.m */; };
+		E200D74B219AA87F00038746 /* SwizzleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E200D74A219AA87F00038746 /* SwizzleUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		1FA3D1C419E16C5000EB17FD /* SwizzleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwizzleTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		1FA3D1C619E16CC700EB17FD /* NSObject+Dealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Dealloc.h"; sourceTree = "<group>"; };
 		1FA3D1C719E16CC700EB17FD /* NSObject+Dealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Dealloc.m"; sourceTree = "<group>"; };
+		E200D74A219AA87F00038746 /* SwizzleUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwizzleUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				1FDEA67E1DF63A1F00869C7B /* Fixtures */,
 				1F7D639E19C466CE00A7C3A6 /* SwizzleTests.swift */,
+				E200D74A219AA87F00038746 /* SwizzleUITests.swift */,
 				1F7D639C19C466CE00A7C3A6 /* Supporting Files */,
 			);
 			path = SwizzleTests;
@@ -265,6 +268,7 @@
 			files = (
 				1FA3D1C819E16CC700EB17FD /* NSObject+Dealloc.m in Sources */,
 				1F7D639F19C466CE00A7C3A6 /* SwizzleTests.swift in Sources */,
+				E200D74B219AA87F00038746 /* SwizzleUITests.swift in Sources */,
 				1F7D63AB19C469BE00A7C3A6 /* _TestObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
