@@ -10,22 +10,22 @@ import Foundation
 
 extension NSObject
 {
-    func hello() -> String
+    @objc func hello() -> String
     {
         return "NSObject-hello"
     }
 
-    func bye() -> String
+    @objc func bye() -> String
     {
         return "NSObject-bye"
     }
 
-    class func hello() -> String
+    @objc class func hello() -> String
     {
         return "NSObject+hello"
     }
 
-    class func bye() -> String
+    @objc class func bye() -> String
     {
         return "NSObject+bye"
     }
@@ -34,19 +34,19 @@ extension NSObject
 class MyObject: NSObject
 {
     // NOTE: dynamic is required for method-swizzling
-    dynamic func bonjour() -> String
+    @objc dynamic func bonjour() -> String
     {
         return "MyObject-bonjour"
     }
 
-    dynamic class func bonjour() -> String
+    @objc dynamic class func bonjour() -> String
     {
         return "MyObject+bonjour"
     }
 
-    let deinitClosure: ((Void) -> Void)?
+    let deinitClosure: (() -> Void)?
 
-    init(deinitClosure: ((Void) -> Void)? = nil)
+    init(deinitClosure: (() -> Void)? = nil)
     {
         self.deinitClosure = deinitClosure
         super.init()
@@ -62,7 +62,7 @@ class MyObject: NSObject
     }
 
     // WARNING: swizzling `dealloc` in Swift won't work
-    dynamic func _swift_dealloc()
+    @objc dynamic func _swift_dealloc()
     {
         print("_swift_dealloc")
         self._swift_dealloc()

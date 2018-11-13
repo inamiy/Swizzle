@@ -12,14 +12,20 @@ private func _swizzleMethod(_ class_: AnyClass, from selector1: Selector, to sel
 {
     let c: AnyClass
     if isClassMethod {
-        c = object_getClass(class_)
+        guard let c_ = object_getClass(class_) else {
+            return
+        }
+        c = c_
     }
     else {
         c = class_
     }
 
-    let method1: Method = class_getInstanceMethod(c, selector1)
-    let method2: Method = class_getInstanceMethod(c, selector2)
+    guard let method1: Method = class_getInstanceMethod(c, selector1),
+        let method2: Method = class_getInstanceMethod(c, selector2) else
+    {
+        return
+    }
 
     if class_addMethod(c, selector1, method_getImplementation(method2), method_getTypeEncoding(method2)) {
         class_replaceMethod(c, selector2, method_getImplementation(method1), method_getTypeEncoding(method1))
