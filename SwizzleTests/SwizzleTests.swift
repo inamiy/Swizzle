@@ -13,7 +13,7 @@ class SwizzleTests: XCTestCase
 {
     func testSwizzleInstanceMethod()
     {
-        let swizzle: (Void) -> Void = {
+        let swizzle: () -> Void = {
             swizzleInstanceMethod(NSObject.self, from: #selector(NSObject.hello), to: #selector(NSObject.bye))
         }
 
@@ -38,7 +38,7 @@ class SwizzleTests: XCTestCase
 
     func testSwizzleClassMethod()
     {
-        let swizzle: (Void) -> Void = {
+        let swizzle: () -> Void = {
             swizzleClassMethod(NSObject.self, from: #selector(NSObject.hello), to: #selector(NSObject.bye))
         }
 
@@ -63,7 +63,7 @@ class SwizzleTests: XCTestCase
     {
         // NOTE: MyObject-hello is not implemented (uses super-method)
 
-        let swizzle: (Void) -> Void = {
+        let swizzle: () -> Void = {
             swizzleInstanceMethod(MyObject.self, from: #selector(MyObject.hello), to: #selector(MyObject.bonjour))
             swizzleClassMethod(MyObject.self, from: #selector(MyObject.hello), to: #selector(MyObject.bonjour))
         }
@@ -97,7 +97,7 @@ class SwizzleTests: XCTestCase
     {
         // NOTE: MyObject-hello is not implemented (uses super-method)
 
-        let swizzle: (Void) -> Void = {
+        let swizzle: () -> Void = {
             swizzleInstanceMethod(MyObject.self, from: #selector(MyObject.bonjour), to: #selector(MyObject.hello))  // reversed
             swizzleClassMethod(MyObject.self, from: #selector(MyObject.bonjour), to: #selector(MyObject.hello))  // reversed
         }
@@ -129,7 +129,7 @@ class SwizzleTests: XCTestCase
 
     func testDealloc()
     {
-        let swizzle: (Void) -> Void = {
+        let swizzle: () -> Void = {
 //            swizzleInstanceMethodString(MyObject.self, "dealloc", "_swift_dealloc")   // comment-out: doesn't work
             swizzleInstanceMethodString(MyObject.self, from: "dealloc", to: "_objc_dealloc")  // NOTE: swizzled_dealloc must be implemented as ObjC code
         }
